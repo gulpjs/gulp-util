@@ -1,0 +1,24 @@
+{
+   "name":"APPNAME",
+   "description":"Nothing here yet",
+   "version":"0.0.1",
+   "homepage":"http://github.com/Contra/APPNAME",
+   "repository":"git://github.com/Contra/APPNAME.git",
+   "author":"Contra <contra@australia.edu> (http://wearefractal.com/)",
+   "main":"./lib/main.coffee",
+   
+   "dependencies":{
+      "coffee-script":"*",
+      "colors":"*",
+      "protege":"*"
+   },
+   "engines":{
+      "node":">= 0.4.0"
+   },
+   "licenses":[
+      {
+         "type":"MIT",
+         "url":"http://github.com/Contra/APPNAME/raw/master/LICENSE"
+      }
+   ]
+}
