@@ -2,9 +2,9 @@
    "name":"APPNAME",
    "description":"Nothing here yet",
    "version":"0.0.1",
-   "homepage":"http://github.com/Contra/APPNAME",
-   "repository":"git://github.com/Contra/APPNAME.git",
-   "author":"Contra <contra@australia.edu> (http://wearefractal.com/)",
+   "homepage":"http://github.com/wearefractal/APPNAME",
+   "repository":"git://github.com/wearefractal/APPNAME.git",
+   "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
    "main":"./lib/main.coffee",
    
    "dependencies":{
@@ -18,7 +18,7 @@
    "licenses":[
       {
          "type":"MIT",
-         "url":"http://github.com/Contra/APPNAME/raw/master/LICENSE"
+         "url":"http://github.com/wearefractal/APPNAME/raw/master/LICENSE"
       }
    ]
 }
