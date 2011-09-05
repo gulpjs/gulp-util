@@ -3,7 +3,7 @@
 
 ## Installation
     
-To install Protege, use [npm](http://github.com/isaacs/npm):
+To install APPNAME, use [npm](http://github.com/isaacs/npm):
 
         $ npm install -g APPNAME
 
