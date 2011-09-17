@@ -1,2 +1,3 @@
-module.exports =
-  log: require './logger'
+require('node-log').setName 'APPNAME'
+
+module.exports = {}

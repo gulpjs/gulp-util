@@ -9,7 +9,7 @@
    
    "dependencies":{
       "coffee-script":"*",
-      "colors":"*",
+      "node-log":"*",
       "protege":"*"
    },
    "engines":{
