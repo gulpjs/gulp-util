@@ -15,10 +15,6 @@ Nothing here yet
 
 You can view further examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
 
-## Contributors
-
-- [Contra](https://github.com/Contra)
-
 ## LICENSE
 
 (MIT License)
