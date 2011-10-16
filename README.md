@@ -5,7 +5,7 @@
     
 To install APPNAME, use [npm](http://github.com/isaacs/npm):
 
-        $ npm install -g APPNAME
+    $ npm install -g APPNAME
 
 ## Usage
 
