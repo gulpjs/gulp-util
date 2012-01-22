@@ -5,12 +5,11 @@
    "homepage":"http://github.com/wearefractal/APPNAME",
    "repository":"git://github.com/wearefractal/APPNAME.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
-   "main":"./lib/main.coffee",
+   "main":"./index.js",
    
    "dependencies":{
       "coffee-script":"*",
       "node-log":"*",
-      "protege":"*"
    },
    "engines":{
       "node":">= 0.4.0"

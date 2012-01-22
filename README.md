@@ -1,15 +1,24 @@
-**Nothing here yet**
+## Information
 
-
-## Installation
-    
-To install APPNAME, use [npm](http://github.com/isaacs/npm):
-
-    $ npm install -g APPNAME
+<table>
+<tr> 
+<td>Package</td><td>APPNAME</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>NOTHING HERE YET</td>
+</tr>
+<tr>
+<td>Node Version</td>
+<td>>= 0.4</td>
+</tr>
+</table>
 
 ## Usage
 
-Nothing here yet
+```coffee-script
+NOTHING HERE YET
+```
 
 ## Examples
 
@@ -19,7 +28,7 @@ You can view further examples in the [example folder.](https://github.com/wearef
 
 (MIT License)
 
-Copyright (c) 2011 Fractal <contact@wearefractal.com>
+Copyright (c) 2012 Fractal <contact@wearefractal.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
