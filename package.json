@@ -8,8 +8,10 @@
    "main":"./index.js",
    
    "dependencies":{
-      "coffee-script":"*",
-      "node-log":"*",
+      "coffee-script":"*"
+   },
+   "devDependencies":{
+      "node-log":"*"
    },
    "engines":{
       "node":">= 0.4.0"
