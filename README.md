@@ -1,3 +1,5 @@
+![status](https://secure.travis-ci.org/wearefractal/APPNAME.png?branch=master)
+
 ## Information
 
 <table>
@@ -22,7 +24,7 @@ NOTHING HERE YET
 
 ## Examples
 
-You can view further examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
+You can view more examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
 
 ## LICENSE
 

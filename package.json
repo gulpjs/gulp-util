@@ -11,7 +11,11 @@
       "coffee-script":"*"
    },
    "devDependencies":{
-      "node-log":"*"
+      "mocha":"*",
+      "should":"*"
+   },
+   "scripts":{
+      "test":"mocha --compilers coffee:coffee-script"
    },
    "engines":{
       "node":">= 0.4.0"
