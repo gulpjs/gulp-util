@@ -8,7 +8,7 @@ build: components lib
 	@node_modules/.bin/uglifyjs -nc --unsafe -mt -o APPNAME.min.js APPNAME.js
 	@echo "File size (minified): " && cat APPNAME.min.js | wc -c
 	@echo "File size (gzipped): " && cat APPNAME.min.js | gzip -9f  | wc -c
-	@cp ./APPNAME.js ./example
+	@cp ./APPNAME.js ./examples/
 
 test: build lib
 	@node_modules/.bin/mocha --compilers coffee:coffee-script
@@ -28,6 +28,7 @@ docs.deploy: docs
   rm -rf .git
 
 clean:
+	@rm -rf dist
 	@rm -rf components
 	@rm -rf build
 	@rm -rf docs
