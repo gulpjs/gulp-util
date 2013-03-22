@@ -12,10 +12,13 @@
    },
    "devDependencies":{
       "mocha":"*",
-      "should":"*"
+      "mocha-phantomjs": "*",
+      "should":"*",
+      "component":"*",
+      "uglify-js":"*"
    },
    "scripts":{
-      "test":"mocha --compilers coffee:coffee-script"
+      "test":"make test"
    },
    "engines":{
       "node":">= 0.4.0"
