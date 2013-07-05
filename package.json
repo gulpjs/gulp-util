@@ -6,16 +6,10 @@
    "repository":"git://github.com/wearefractal/APPNAME.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
    "main":"./index.js",
-   
-   "dependencies":{
-      "coffee-script":"*"
-   },
+
    "devDependencies":{
       "mocha":"*",
-      "mocha-phantomjs": "*",
-      "should":"*",
-      "component":"*",
-      "uglify-js":"*"
+      "should":"*"
    },
    "scripts":{
       "test":"make test"

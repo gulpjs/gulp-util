@@ -18,7 +18,7 @@
 
 ## Usage
 
-```coffee-script
+```javascript
 NOTHING HERE YET
 ```
 
