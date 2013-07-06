@@ -19,8 +19,10 @@
 ## Usage
 
 ```javascript
-gulp.replaceExtension("file.coffee", ".js"); // file.js
-gulp.realBase("/home/contra/test/whatever/huh/file.js", "/home/contra/test"); // /whatever/huh/file.js
+var util = require('gulp-util');
+
+util.replaceExtension("file.coffee", ".js"); // file.js
+util.realBase("/home/contra/test/whatever/huh/file.js", "/home/contra/test"); // /whatever/huh/file.js
 ```
 
 ## LICENSE
