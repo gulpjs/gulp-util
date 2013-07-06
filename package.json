@@ -1,15 +1,12 @@
 {
-   "name":"APPNAME",
-   "description":"Nothing here yet",
+   "name":"gulp-util",
+   "description":"Utility functions for gulp plugins",
    "version":"0.0.1",
-   "homepage":"http://github.com/wearefractal/APPNAME",
-   "repository":"git://github.com/wearefractal/APPNAME.git",
+   "homepage":"http://github.com/wearefractal/gulp-util",
+   "repository":"git://github.com/wearefractal/gulp-util.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
    "main":"./index.js",
-   
-   "dependencies":{
-      
-   },
+
    "devDependencies":{
       "mocha":"*",
       "should":"*"
@@ -23,7 +20,7 @@
    "licenses":[
       {
          "type":"MIT",
-         "url":"http://github.com/wearefractal/APPNAME/raw/master/LICENSE"
+         "url":"http://github.com/wearefractal/gulp-util/raw/master/LICENSE"
       }
    ]
 }

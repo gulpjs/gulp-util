@@ -1,14 +1,14 @@
-![status](https://secure.travis-ci.org/wearefractal/APPNAME.png?branch=master)
+![status](https://secure.travis-ci.org/wearefractal/gulp-util.png?branch=master)
 
 ## Information
 
 <table>
 <tr> 
-<td>Package</td><td>APPNAME</td>
+<td>Package</td><td>gulp-util</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>NOTHING HERE YET</td>
+<td>Utility functions for gulp plugins</td>
 </tr>
 <tr>
 <td>Node Version</td>
@@ -19,12 +19,9 @@
 ## Usage
 
 ```javascript
-NOTHING HERE YET
+gulp.replaceExtension("file.coffee", ".js"); # file.js
+gulp.realBase("/home/contra/test/whatever/huh/file.js", "/home/contra/test"); # /whatever/huh/file.js
 ```
-
-## Examples
-
-You can view more examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
 
 ## LICENSE
 
