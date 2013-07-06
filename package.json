@@ -6,13 +6,16 @@
    "repository":"git://github.com/wearefractal/APPNAME.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
    "main":"./index.js",
-
+   
+   "dependencies":{
+      
+   },
    "devDependencies":{
       "mocha":"*",
       "should":"*"
    },
    "scripts":{
-      "test":"make test"
+      "test":"mocha"
    },
    "engines":{
       "node":">= 0.4.0"
