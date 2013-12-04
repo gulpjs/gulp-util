@@ -1,26 +1,30 @@
 {
-   "name":"gulp-util",
-   "description":"Utility functions for gulp plugins",
-   "version":"1.0.0",
-   "homepage":"http://github.com/wearefractal/gulp-util",
-   "repository":"git://github.com/wearefractal/gulp-util.git",
-   "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
-   "main":"./index.js",
-
-   "devDependencies":{
-      "mocha":"*",
-      "should":"*"
-   },
-   "scripts":{
-      "test":"mocha"
-   },
-   "engines":{
-      "node":">= 0.4.0"
-   },
-   "licenses":[
-      {
-         "type":"MIT",
-         "url":"http://github.com/wearefractal/gulp-util/raw/master/LICENSE"
-      }
-   ]
+  "name": "gulp-util",
+  "description": "Utility functions for gulp plugins",
+  "version": "1.1.0",
+  "homepage": "http://github.com/wearefractal/gulp-util",
+  "repository": "git://github.com/wearefractal/gulp-util.git",
+  "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
+  "main": "./index.js",
+  "dependencies": {
+    "chalk": "~0.3.0",
+    "lodash.template": "~2.4.1",
+    "optimist": "~0.6.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/wearefractal/gulp-util/raw/master/LICENSE"
+    }
+  ]
 }

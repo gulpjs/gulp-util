@@ -25,6 +25,31 @@ util.replaceExtension("file.coffee", ".js"); // file.js
 util.realBase("/home/contra/test/whatever/huh/file.js", "/home/contra/test"); // /whatever/huh/file.js
 ```
 
+### log(msg...)
+
+Logs stuff. Already prefixed with [gulp] and all that. Use the right colors for values. If you pass in multiple arguments it will join them by a space.
+
+```
+values (files, module names, etc.) = magenta
+numbers (times, counts, etc) = cyan
+```
+
+### colors
+
+This is an instance of [chalk](https://github.com/sindresorhus/chalk)
+
+### replaceExtension(path, newExtension)
+
+Replaces a file extension in a path. Returns the new path.
+
+### realBase(baseDir, path)
+
+Returns a pretty base path.
+
+### template(string[, data])
+
+This is a lodash.template function wrapper. You must pass in a valid gulp file object so it is available to the user or it will error. You can not configure any of the delimiters. Look at the [lodash docs](http://lodash.com/docs#template) for more info.
+
 ## LICENSE
 
 (MIT License)

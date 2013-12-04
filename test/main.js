@@ -4,6 +4,69 @@ var join = require('path').join;
 require('mocha');
 
 describe('gulp-util', function() {
+  describe('colors', function(){
+    it('should be a chalk instance', function(done){
+      util.colors.should.equal(require('chalk'));
+      done();
+    });
+  });
+
+  describe('log()', function(){
+    it('should work i guess', function(done){
+      util.log(1, 2, 3, 4, "five");
+      done();
+    });
+  });
+
+  describe('template()', function(){
+    it('should work with just a template', function(done){
+      var opt = {
+        name:"todd",
+        file: {
+          path: "hi.js"
+        }
+      };
+      var expected = "test todd hi.js";
+
+      var tmpl = util.template('test <%= name %> <%= file.path %>');
+      should.exist(tmpl);
+      'function'.should.equal(typeof(tmpl));
+
+      // eval it now
+      var etmpl = tmpl(opt);
+      'string'.should.equal(typeof(etmpl));
+      etmpl.should.equal(expected);
+      done();
+    });
+    it('should work with a template and data', function(done){
+      var opt = {
+        name:"todd",
+        file: {
+          path: "hi.js"
+        }
+      };
+      var expected = "test todd hi.js";
+      var tmpl = util.template('test <%= name %> <%= file.path %>', opt);
+      should.exist(tmpl);
+      'string'.should.equal(typeof(tmpl));
+      tmpl.should.equal(expected);
+      done();
+    });
+
+    it('should throw an error when no file object is passed', function(done){
+      var opt = {
+        name:"todd"
+      };
+      try {
+        var tmpl = util.template('test <%= name %> <%= file.path %>', opt);
+      } catch (err) {
+        should.exist(err);
+        done();
+      }
+    });
+
+  });
+
   describe('realBase()', function() {
     it('should return a valid shortened name', function(done) {
       var fname = join(__dirname, "./fixtures/test.coffee");
