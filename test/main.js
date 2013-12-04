@@ -18,6 +18,36 @@ describe('gulp-util', function() {
     });
   });
 
+  describe('prettyTime()', function(){
+    it('should work with seconds', function(done){
+      util.prettyTime(1.5).should.eql({
+        value: 1.5,
+        unit: "seconds",
+        shortUnit: "s"
+      });
+      done();
+    });
+
+    it('should work with milliseconds', function(done){
+      util.prettyTime(0.5).should.eql({
+        value: 500,
+        unit: "milliseconds",
+        shortUnit: "ms"
+      });
+      done();
+    });
+
+    it('should work with milliseconds', function(done){
+      util.prettyTime(0.01).should.eql({
+        value: 10,
+        unit: "milliseconds",
+        shortUnit: "ms"
+      });
+      done();
+    });
+
+  });
+
   describe('template()', function(){
     it('should work with just a template', function(done){
       var opt = {
