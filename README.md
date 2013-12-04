@@ -19,10 +19,17 @@
 ## Usage
 
 ```javascript
-var util = require('gulp-util');
+var gutil = require('gulp-util');
 
-util.replaceExtension("file.coffee", ".js"); // file.js
-util.realBase("/home/contra/test/whatever/huh/file.js", "/home/contra/test"); // /whatever/huh/file.js
+gutil.log("stuff happened", "Really it did", gulp.colors.cyan("123"));
+gutil.replaceExtension("file.coffee", ".js"); // file.js
+gutil.realBase("/home/contra/test/whatever/huh/file.js", "/home/contra/test"); // /whatever/huh/file.js
+
+var opt = {
+  name: "todd",
+  file: someGulpFile
+};
+gutil.template("test <%= name %> <%= file.path %>", opt) // test todd /js/hi.js
 ```
 
 ### log(msg...)
