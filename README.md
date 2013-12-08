@@ -57,6 +57,18 @@ Returns a pretty base path.
 
 This is a lodash.template function wrapper. You must pass in a valid gulp file object so it is available to the user or it will error. You can not configure any of the delimiters. Look at the [lodash docs](http://lodash.com/docs#template) for more info.
 
+## new File(obj)
+
+path and base attributes are required. Other attributes are stat, cwd, contents. The relative attribute is read-only and is based on the base+path relativity.
+
+```javascript
+var file = new gulp.File({
+  base: join(__dirname, "./fixtures/"),
+  cwd: __dirname,
+  path: join(__dirname, "./fixtures/test.coffee")
+});
+```
+
 ## LICENSE
 
 (MIT License)

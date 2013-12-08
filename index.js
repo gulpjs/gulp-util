@@ -5,5 +5,6 @@ module.exports = {
   colors: require('chalk'),
   log: require('./lib/log'),
   template: require('./lib/template'),
-  env: require('optimist').argv
+  env: require('optimist').argv,
+  File: require('./lib/File')
 };
