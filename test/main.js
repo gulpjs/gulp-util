@@ -190,4 +190,29 @@ describe('gulp-util', function() {
     });
   });
 
+  describe('extend()', function() {
+    it('should overwrite properties in the right order', function(done) {
+      var obj = util.extend({ x: 1 }, { x: 2 }, { x: 3});
+      obj.x.should.equal(3);
+      done();
+    });
+
+    it('should combine objects', function(done) {
+      var obj = util.extend({ x: 1 }, { y: 2 }, { z: 3});
+      obj.x.should.equal(1);
+      obj.y.should.equal(2);
+      obj.z.should.equal(3);
+      done();
+    });
+
+    it('should not error when passed undefined or null', function(done) {
+      (function() {
+        var obj = util.extend({ x: 1 }, undefined, { y: 2 }, null, undefined, {});
+
+        obj.x.should.equal(1);
+        obj.y.should.equal(2);
+      }).should.not.throw();
+      done();
+    });
+  });
 });
