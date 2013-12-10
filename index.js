@@ -6,5 +6,6 @@ module.exports = {
   log: require('./lib/log'),
   template: require('./lib/template'),
   env: require('optimist').argv,
-  File: require('./lib/File')
+  File: require('./lib/File'),
+  linefeed: require('./lib/linefeed')
 };

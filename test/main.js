@@ -171,4 +171,16 @@ describe('gulp-util', function() {
     });
   });
 
+  describe('linefeed', function(){
+    it('should be correct per platform', function(done){
+      if (process.platform === 'win32') {
+        util.linefeed.should.equal('\r\n');
+      }
+      else {
+        util.linefeed.should.equal('\n');
+      }
+      done();
+    });
+  });
+
 });
