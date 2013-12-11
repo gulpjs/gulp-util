@@ -12,7 +12,7 @@
 </tr>
 <tr>
 <td>Node Version</td>
-<td>>= 0.4</td>
+<td>>= 0.8</td>
 </tr>
 </table>
 
@@ -48,10 +48,6 @@ This is an instance of [chalk](https://github.com/sindresorhus/chalk)
 ### replaceExtension(path, newExtension)
 
 Replaces a file extension in a path. Returns the new path.
-
-### realBase(baseDir, path)
-
-Returns a pretty base path.
 
 ### template(string[, data])
 
