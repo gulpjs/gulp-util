@@ -13,39 +13,21 @@ describe('gulp-util', function() {
 
   describe('log()', function(){
     it('should work i guess', function(done){
+      var writtenValue;
+
+      // Stub process.stdout.write
+      var stdout_write = process.stdout.write;
+      process.stdout.write = function(value) {
+        writtenValue = value;
+      };
+
       util.log(1, 2, 3, 4, "five");
+      writtenValue.should.eql('['+util.colors.green('gulp')+'] 1 2 3 4 five\n');
+
+      // Restore process.stdout.write
+      process.stdout.write = stdout_write;
       done();
     });
-  });
-
-  describe('prettyTime()', function(){
-    it('should work with seconds', function(done){
-      util.prettyTime(1.5).should.eql({
-        value: 1.5,
-        unit: "seconds",
-        shortUnit: "s"
-      });
-      done();
-    });
-
-    it('should work with milliseconds', function(done){
-      util.prettyTime(0.5).should.eql({
-        value: 500,
-        unit: "milliseconds",
-        shortUnit: "ms"
-      });
-      done();
-    });
-
-    it('should work with milliseconds', function(done){
-      util.prettyTime(0.01).should.eql({
-        value: 10,
-        unit: "milliseconds",
-        shortUnit: "ms"
-      });
-      done();
-    });
-
   });
 
   describe('template()', function(){
@@ -156,6 +138,25 @@ describe('gulp-util', function() {
       file.cwd.should.equal(__dirname);
       file.base.should.equal(base);
       file.relative.should.equal("fixtures/test.coffee");
+      done();
+    });
+  });
+
+  describe('beep()', function(){
+    it('should send the right code to stdout', function(done){
+      var writtenValue;
+
+      // Stub process.stdout.write
+      var stdout_write = process.stdout.write;
+      process.stdout.write = function(value) {
+        writtenValue = value;
+      };
+
+      util.beep();
+      writtenValue.should.equal('\x07');
+
+      // Restore process.stdout.write
+      process.stdout.write = stdout_write;
       done();
     });
   });

@@ -1,10 +1,9 @@
 module.exports = {
+  File: require('./lib/File'),
   replaceExtension: require('./lib/replaceExtension'),
-  prettyTime: require('./lib/prettyTime'),
-  colors: require('chalk'),
+  colors: require('./lib/colors'),
   log: require('./lib/log'),
   template: require('./lib/template'),
-  env: require('optimist').argv,
-  File: require('./lib/File'),
-  realBase: require('path').relative // deprecated
+  env: require('./lib/env'),
+  beep: require('./lib/beep')
 };

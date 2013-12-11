@@ -22,8 +22,9 @@
 var gutil = require('gulp-util');
 
 gutil.log("stuff happened", "Really it did", gulp.colors.cyan("123"));
+gutil.beep();
+
 gutil.replaceExtension("file.coffee", ".js"); // file.js
-gutil.realBase("/home/contra/test/whatever/huh/file.js", "/home/contra/test"); // /whatever/huh/file.js
 
 var opt = {
   name: "todd",
