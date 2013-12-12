@@ -50,6 +50,14 @@ This is an instance of [chalk](https://github.com/sindresorhus/chalk)
 
 Replaces a file extension in a path. Returns the new path.
 
+### isStream(obj)
+
+Returns true or false if an object is a stream.
+
+### isBuffer(obj)
+
+Returns true or false if an object is a Buffer.
+
 ### template(string[, data])
 
 This is a lodash.template function wrapper. You must pass in a valid gulp file object so it is available to the user or it will error. You can not configure any of the delimiters. Look at the [lodash docs](http://lodash.com/docs#template) for more info.

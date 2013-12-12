@@ -5,5 +5,7 @@ module.exports = {
   log: require('./lib/log'),
   template: require('./lib/template'),
   env: require('./lib/env'),
-  beep: require('./lib/beep')
+  beep: require('./lib/beep'),
+  isStream: require('./lib/isStream'),
+  isBuffer: require('./lib/isBuffer')
 };
