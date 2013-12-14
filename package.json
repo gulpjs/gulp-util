@@ -9,12 +9,14 @@
   "dependencies": {
     "chalk": "~0.3.0",
     "lodash.template": "~2.4.1",
+    "lodash._reinterpolate": "~2.4.1",
     "optimist": "~0.6.0"
   },
   "devDependencies": {
     "mocha": "*",
     "should": "*",
-    "event-stream": "*"
+    "event-stream": "*",
+    "lodash.templatesettings": "~2.4.1"
   },
   "scripts": {
     "test": "mocha"
