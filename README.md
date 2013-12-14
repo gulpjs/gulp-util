@@ -21,7 +21,7 @@
 ```javascript
 var gutil = require('gulp-util');
 
-gutil.log("stuff happened", "Really it did", gulp.colors.cyan("123"));
+gutil.log("stuff happened", "Really it did", gutil.colors.cyan("123"));
 gutil.beep();
 
 gutil.replaceExtension("file.coffee", ".js"); // file.js
