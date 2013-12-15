@@ -1,13 +1,13 @@
 {
   "name": "gulp-util",
   "description": "Utility functions for gulp plugins",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "homepage": "http://github.com/wearefractal/gulp-util",
   "repository": "git://github.com/wearefractal/gulp-util.git",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
   "main": "./index.js",
   "dependencies": {
-    "chalk": "~0.3.0",
+    "chalk": "~0.4.0",
     "lodash.template": "~2.4.1",
     "lodash._reinterpolate": "~2.4.1",
     "optimist": "~0.6.0"
