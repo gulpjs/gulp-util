@@ -228,7 +228,21 @@ describe('gulp-util', function() {
       util.isBuffer(es.map(function(){})).should.equal(false);
       done();
     });
+  });
 
+  describe('isNull()', function(){
+    it('should work on a null', function(done){
+      util.isNull(null).should.equal(true);
+      done();
+    });
+    it('should not work on a stream', function(done){
+      util.isNull(es.map(function(){})).should.equal(false);
+      done();
+    });
+    it('should not work on undefined', function(done){
+      util.isNull(undefined).should.equal(false);
+      done();
+    });
   });
 
 });

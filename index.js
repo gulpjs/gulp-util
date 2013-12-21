@@ -7,5 +7,6 @@ module.exports = {
   env: require('./lib/env'),
   beep: require('./lib/beep'),
   isStream: require('./lib/isStream'),
-  isBuffer: require('./lib/isBuffer')
+  isBuffer: require('./lib/isBuffer'),
+  isNull: require('./lib/isNull')
 };
