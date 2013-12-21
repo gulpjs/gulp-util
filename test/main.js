@@ -22,7 +22,7 @@ describe('gulp-util', function() {
         writtenValue = value;
       };
 
-      util.log(1, 2, 3, 4, "five");
+      util.log(1, 2, 3, 4, 'five');
       writtenValue.should.eql('['+util.colors.green('gulp')+'] 1 2 3 4 five\n');
 
       // Restore process.stdout.write
@@ -34,12 +34,12 @@ describe('gulp-util', function() {
   describe('template()', function(){
     it('should work with just a template', function(done){
       var opt = {
-        name:"todd",
+        name:'todd',
         file: {
-          path: "hi.js"
+          path: 'hi.js'
         }
       };
-      var expected = "test todd hi.js";
+      var expected = 'test todd hi.js';
 
       var tmpl = util.template('test <%= name %> <%= file.path %>');
       should.exist(tmpl);
@@ -54,12 +54,12 @@ describe('gulp-util', function() {
 
     it('should work with a template and data', function(done){
       var opt = {
-        name:"todd",
+        name:'todd',
         file: {
-          path: "hi.js"
+          path: 'hi.js'
         }
       };
-      var expected = "test todd hi.js";
+      var expected = 'test todd hi.js';
       var tmpl = util.template('test <%= name %> <%= file.path %>', opt);
       should.exist(tmpl);
       'string'.should.equal(typeof(tmpl));
@@ -69,7 +69,7 @@ describe('gulp-util', function() {
 
     it('should throw an error when no file object is passed', function(done){
       var opt = {
-        name:"todd"
+        name:'todd'
       };
       try {
         var tmpl = util.template('test <%= name %> <%= file.path %>', opt);
@@ -84,12 +84,12 @@ describe('gulp-util', function() {
       templateSettings.interpolate = /\{\{([\s\S]+?)\}\}/g;
 
       var opt = {
-        name:"todd",
+        name:'todd',
         file: {
-          path: "hi.js"
+          path: 'hi.js'
         }
       };
-      var expected = "test {{name}} hi.js";
+      var expected = 'test {{name}} hi.js';
 
       var tmpl = util.template('test {{name}} <%= file.path %>');
       should.exist(tmpl);
@@ -105,12 +105,12 @@ describe('gulp-util', function() {
 
     it('should allow ES6 delimiters', function(done){
       var opt = {
-        name:"todd",
+        name:'todd',
         file: {
-          path: "hi.js"
+          path: 'hi.js'
         }
       };
-      var expected = "test todd hi.js";
+      var expected = 'test todd hi.js';
 
       var tmpl = util.template('test ${name} ${file.path}');
       should.exist(tmpl);
@@ -128,18 +128,27 @@ describe('gulp-util', function() {
 
   describe('replaceExtension()', function() {
     it('should return a valid replaced extension on nested', function(done) {
-      var fname = path.join(__dirname, "./fixtures/test.coffee");
-      var expected = path.join(__dirname, "./fixtures/test.js");
-      var nu = util.replaceExtension(fname, ".js");
+      var fname = path.join(__dirname, './fixtures/test.coffee');
+      var expected = path.join(__dirname, './fixtures/test.js');
+      var nu = util.replaceExtension(fname, '.js');
       should.exist(nu);
       nu.should.equal(expected);
       done();
     });
 
     it('should return a valid replaced extension on flat', function(done) {
-      var fname = "test.coffee";
-      var expected = "test.js";
-      var nu = util.replaceExtension(fname, ".js");
+      var fname = 'test.coffee';
+      var expected = 'test.js';
+      var nu = util.replaceExtension(fname, '.js');
+      should.exist(nu);
+      nu.should.equal(expected);
+      done();
+    });
+
+    it('should not return a valid replaced extension on empty string', function(done) {
+      var fname = '';
+      var expected = '';
+      var nu = util.replaceExtension(fname, '.js');
       should.exist(nu);
       nu.should.equal(expected);
       done();
@@ -149,8 +158,8 @@ describe('gulp-util', function() {
 
   describe('File()', function() {
     it('should return a valid file', function(done) {
-      var fname = path.join(__dirname, "./fixtures/test.coffee");
-      var base = path.join(__dirname, "./fixtures/");
+      var fname = path.join(__dirname, './fixtures/test.coffee');
+      var base = path.join(__dirname, './fixtures/');
       var file = new util.File({
         base: base,
         cwd: __dirname,
@@ -164,12 +173,12 @@ describe('gulp-util', function() {
       file.path.should.equal(fname);
       file.cwd.should.equal(__dirname);
       file.base.should.equal(base);
-      file.relative.should.equal("test.coffee");
+      file.relative.should.equal('test.coffee');
       done();
     });
 
     it('should return a valid file 2', function(done) {
-      var fname = path.join(__dirname, "./fixtures/test.coffee");
+      var fname = path.join(__dirname, './fixtures/test.coffee');
       var base = __dirname;
       var file = new util.File({
         base: base,
@@ -184,7 +193,7 @@ describe('gulp-util', function() {
       file.path.should.equal(fname);
       file.cwd.should.equal(__dirname);
       file.base.should.equal(base);
-      file.relative.should.equal("fixtures/test.coffee");
+      file.relative.should.equal('fixtures/test.coffee');
       done();
     });
   });
