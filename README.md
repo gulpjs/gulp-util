@@ -46,6 +46,10 @@ numbers (times, counts, etc) = cyan
 
 This is an instance of [chalk](https://github.com/sindresorhus/chalk)
 
+### linefeed
+
+Just `\n`. Use this.
+
 ### replaceExtension(path, newExtension)
 
 Replaces a file extension in a path. Returns the new path.

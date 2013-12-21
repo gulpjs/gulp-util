@@ -8,5 +8,6 @@ module.exports = {
   beep: require('./lib/beep'),
   isStream: require('./lib/isStream'),
   isBuffer: require('./lib/isBuffer'),
-  isNull: require('./lib/isNull')
+  isNull: require('./lib/isNull'),
+  linefeed: require('./lib/linefeed')
 };
