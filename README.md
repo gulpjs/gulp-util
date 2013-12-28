@@ -78,6 +78,19 @@ var file = new gulp.File({
 });
 ```
 
+## noop()
+
+Returns a stream that does nothing but pass data straight through.
+
+```javascript
+gulp.task('scripts', function() {
+  gulp.src('src/**/*.js')
+    .pipe(concat('script.js'))
+    .pipe(gulp.env.production ? uglify() : gutil.noop())
+    .pipe(gulp.dest('dist/');
+});
+```
+
 ## LICENSE
 
 (MIT License)
