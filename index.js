@@ -10,5 +10,6 @@ module.exports = {
   isStream: require('./lib/isStream'),
   isBuffer: require('./lib/isBuffer'),
   isNull: require('./lib/isNull'),
-  linefeed: require('./lib/linefeed')
+  linefeed: require('./lib/linefeed'),
+  PluginError: require('./lib/PluginError')
 };
