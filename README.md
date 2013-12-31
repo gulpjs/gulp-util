@@ -68,7 +68,7 @@ This is a lodash.template function wrapper. You must pass in a valid gulp file o
 
 ## new File(obj)
 
-path and base attributes are required. Other attributes are stat, cwd, contents. The relative attribute is read-only and is based on the base+path relativity.
+This is just [vinyl](https://github.com/wearefractal/vinyl)
 
 ```javascript
 var file = new gulp.File({
@@ -88,6 +88,23 @@ gulp.task('scripts', function() {
     .pipe(concat('script.js'))
     .pipe(gulp.env.production ? uglify() : gutil.noop())
     .pipe(gulp.dest('dist/');
+});
+```
+
+## combine(streams...)
+
+Argument may also be an array of streams. Returns a function that returns the combined stream. Useful for keeping things DRY
+
+```javascript
+var scripts = gulp.combine(
+    coffee({bare: true}),
+    uglify(),
+    concat('script.js'),
+    gulp.dest('dist/')
+);
+
+gulp.task('default', function() {
+  gulp.src('*.coffee').pipe(scripts());
 });
 ```
 

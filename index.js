@@ -11,5 +11,6 @@ module.exports = {
   isBuffer: require('./lib/isBuffer'),
   isNull: require('./lib/isNull'),
   linefeed: require('./lib/linefeed'),
+  combine: require('./lib/combine'),
   PluginError: require('./lib/PluginError')
 };
