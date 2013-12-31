@@ -93,10 +93,10 @@ gulp.task('scripts', function() {
 
 ## combine(streams...)
 
-Argument may also be an array of streams. Returns a function that returns the combined stream. Useful for keeping things DRY
+Argument may also be an array of streams. Returns a function that returns the combined stream. Useful for keeping things DRY. This is a simple wrapper around event-stream's `.pipeline`
 
 ```javascript
-var scripts = gulp.combine(
+var scripts = gutil.combine(
     coffee({bare: true}),
     uglify(),
     concat('script.js'),
@@ -106,6 +106,23 @@ var scripts = gulp.combine(
 gulp.task('default', function() {
   gulp.src('*.coffee').pipe(scripts());
 });
+```
+
+## buffer(cb)
+
+This is similar to es.wait but instead of buffering text into one string it buffers anything into an array (so very useful for file objects).
+
+Returns a stream that can be piped to.
+
+The stream will emit one data event after the stream piped to it has ended. The data will be the same array passed to the callback.
+
+Callback is optional and receives two arguments: error and data
+
+```javascript
+gulp.src("stuff/*.js")
+  .pipe(gutil.buffer(function(err, files){
+  
+  });
 ```
 
 ## LICENSE
