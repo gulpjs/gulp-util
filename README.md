@@ -21,16 +21,16 @@
 ```javascript
 var gutil = require('gulp-util');
 
-gutil.log("stuff happened", "Really it did", gutil.colors.cyan("123"));
+gutil.log('stuff happened', 'Really it did', gutil.colors.cyan('123'));
 gutil.beep();
 
-gutil.replaceExtension("file.coffee", ".js"); // file.js
+gutil.replaceExtension('file.coffee', '.js'); // file.js
 
 var opt = {
-  name: "todd",
+  name: 'todd',
   file: someGulpFile
 };
-gutil.template("test <%= name %> <%= file.path %>", opt) // test todd /js/hi.js
+gutil.template('test <%= name %> <%= file.path %>', opt) // test todd /js/hi.js
 ```
 
 ### log(msg...)
@@ -72,9 +72,9 @@ This is just [vinyl](https://github.com/wearefractal/vinyl)
 
 ```javascript
 var file = new gulp.File({
-  base: join(__dirname, "./fixtures/"),
+  base: join(__dirname, './fixtures/'),
   cwd: __dirname,
-  path: join(__dirname, "./fixtures/test.coffee")
+  path: join(__dirname, './fixtures/test.coffee')
 });
 ```
 
@@ -119,7 +119,7 @@ The stream will emit one data event after the stream piped to it has ended. The 
 Callback is optional and receives two arguments: error and data
 
 ```javascript
-gulp.src("stuff/*.js")
+gulp.src('stuff/*.js')
   .pipe(gutil.buffer(function(err, files){
   
   });
@@ -148,7 +148,7 @@ var err = new util.PluginError('test', 'something broke');
 
 var err = new util.PluginError('test', 'something broke', {showStack: true});
 
-var existingError = new Error("OMG");
+var existingError = new Error('OMG');
 var err = new util.PluginError('test', existingError, {showStack: true});
 ```
 
@@ -160,7 +160,7 @@ Copyright (c) 2013 Fractal <contact@wearefractal.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
+'Software'), to deal in the Software without restriction, including
 without limitation the rights to use, copy, modify, merge, publish,
 distribute, sublicense, and/or sell copies of the Software, and to
 permit persons to whom the Software is furnished to do so, subject to
@@ -169,7 +169,7 @@ the following conditions:
 The above copyright notice and this permission notice shall be
 included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
 NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
