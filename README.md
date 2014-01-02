@@ -125,6 +125,33 @@ gulp.src("stuff/*.js")
   });
 ```
 
+## new PluginError(pluginName, message[, options])
+
+- pluginName should be the module name of your plugin
+- message can be a string or an existing error
+- By default the stack will not be shown. Set `options.showStack` to true if you think the stack is important for your error.
+- If you pass an error in as the message the stack will be pulled from that, otherwise one will be created.
+
+These are all acceptable forms of instantiation:
+
+```javascript
+var err = new gutil.PluginError('test', {
+  message: 'something broke'
+});
+
+var err = new util.PluginError({
+  plugin: 'test',
+  message: 'something broke'
+});
+
+var err = new util.PluginError('test', 'something broke');
+
+var err = new util.PluginError('test', 'something broke', {showStack: true});
+
+var existingError = new Error("OMG");
+var err = new util.PluginError('test', existingError, {showStack: true});
+```
+
 ## LICENSE
 
 (MIT License)
