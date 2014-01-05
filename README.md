@@ -46,6 +46,10 @@ numbers (times, counts, etc) = cyan
 
 This is an instance of [chalk](https://github.com/sindresorhus/chalk)
 
+### date
+
+This is an instance of [node-dateformat](https://github.com/felixge/node-dateformat).
+
 ### linefeed
 
 Just `\n`. Use this.

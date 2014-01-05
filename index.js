@@ -2,6 +2,7 @@ module.exports = {
   File: require('./lib/File'),
   replaceExtension: require('./lib/replaceExtension'),
   colors: require('./lib/colors'),
+  date: require('./lib/date'),
   log: require('./lib/log'),
   template: require('./lib/template'),
   env: require('./lib/env'),
