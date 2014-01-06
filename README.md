@@ -75,7 +75,7 @@ This is a lodash.template function wrapper. You must pass in a valid gulp file o
 This is just [vinyl](https://github.com/wearefractal/vinyl)
 
 ```javascript
-var file = new gulp.File({
+var file = new gutil.File({
   base: join(__dirname, './fixtures/'),
   cwd: __dirname,
   path: join(__dirname, './fixtures/test.coffee')
@@ -143,17 +143,17 @@ var err = new gutil.PluginError('test', {
   message: 'something broke'
 });
 
-var err = new util.PluginError({
+var err = new gutil.PluginError({
   plugin: 'test',
   message: 'something broke'
 });
 
-var err = new util.PluginError('test', 'something broke');
+var err = new gutil.PluginError('test', 'something broke');
 
-var err = new util.PluginError('test', 'something broke', {showStack: true});
+var err = new gutil.PluginError('test', 'something broke', {showStack: true});
 
 var existingError = new Error('OMG');
-var err = new util.PluginError('test', existingError, {showStack: true});
+var err = new gutil.PluginError('test', existingError, {showStack: true});
 ```
 
 ## LICENSE
