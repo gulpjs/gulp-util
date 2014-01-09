@@ -1,7 +1,7 @@
 var util = require('../');
 var should = require('should');
 var path = require('path');
-var es = require('event-stream');
+var through = require('through');
 require('mocha');
 
 describe('isBuffer()', function(){
@@ -10,7 +10,7 @@ describe('isBuffer()', function(){
     done();
   });
   it('should not work on a stream', function(done){
-    util.isBuffer(es.map(function(){})).should.equal(false);
+    util.isBuffer(through(function(){})).should.equal(false);
     done();
   });
 });
