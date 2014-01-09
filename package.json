@@ -1,7 +1,7 @@
 {
   "name": "gulp-util",
   "description": "Utility functions for gulp plugins",
-  "version": "2.2.8",
+  "version": "2.2.9",
   "homepage": "http://github.com/wearefractal/gulp-util",
   "repository": "git://github.com/wearefractal/gulp-util.git",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
@@ -13,13 +13,14 @@
     "optimist": "~0.6.0",
     "vinyl": "~0.2.1",
     "through": "~2.3.4",
-    "dateformat": "~1.0.7-1.2.3"
+    "dateformat": "~1.0.7-1.2.3",
+    "stream-combiner": "0.0.4"
   },
   "devDependencies": {
     "mocha": "*",
     "should": "*",
     "lodash.templatesettings": "~2.4.1",
-    "event-stream": "*"
+    "event-stream": "~3.0.20"
   },
   "scripts": {
     "test": "mocha --reporter spec"
