@@ -12,14 +12,14 @@
     "lodash._reinterpolate": "~2.4.1",
     "optimist": "~0.6.0",
     "vinyl": "~0.2.1",
-    "event-stream": "~3.0.20",
     "dateformat": "~1.0.7-1.2.3"
   },
   "devDependencies": {
     "mocha": "*",
     "should": "*",
-    "event-stream": "*",
-    "lodash.templatesettings": "~2.4.1"
+    "through": "*",
+    "lodash.templatesettings": "~2.4.1",
+    "event-stream": "*"
   },
   "scripts": {
     "test": "mocha --reporter spec"

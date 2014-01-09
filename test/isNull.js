@@ -1,7 +1,7 @@
 var util = require('../');
 var should = require('should');
 var path = require('path');
-var es = require('event-stream');
+var through = require('through');
 require('mocha');
 
 describe('isNull()', function(){
@@ -10,7 +10,7 @@ describe('isNull()', function(){
     done();
   });
   it('should not work on a stream', function(done){
-    util.isNull(es.map(function(){})).should.equal(false);
+    util.isNull(through(function(){})).should.equal(false);
     done();
   });
   it('should not work on undefined', function(done){
