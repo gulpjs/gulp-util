@@ -52,7 +52,7 @@ describe('template()', function(){
   });
 
   it('should ignore modified templateSettings', function(done){
-    var templateSettings = require('lodash.templatesettings');
+    var templateSettings = require('lodash-node/modern/utilities/templateSettings');
     templateSettings.interpolate = /\{\{([\s\S]+?)\}\}/g;
 
     var opt = {

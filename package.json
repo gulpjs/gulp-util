@@ -8,8 +8,7 @@
   "main": "./index.js",
   "dependencies": {
     "chalk": "~0.4.0",
-    "lodash.template": "~2.4.1",
-    "lodash._reinterpolate": "~2.4.1",
+    "lodash-node": "~2.4.1",
     "optimist": "~0.6.0",
     "vinyl": "~0.2.1",
     "through": "~2.3.4",
@@ -19,7 +18,6 @@
   "devDependencies": {
     "mocha": "*",
     "should": "*",
-    "lodash.templatesettings": "~2.4.1",
     "event-stream": "~3.0.20"
   },
   "scripts": {
