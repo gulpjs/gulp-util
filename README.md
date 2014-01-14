@@ -156,8 +156,8 @@ var existingError = new Error('OMG');
 var err = new gutil.PluginError('test', existingError, {showStack: true});
 ```
 
-[npm-url]: https://npmjs.org/package/vinyl-fs
-[npm-image]: https://badge.fury.io/js/vinyl-fs.png
+[npm-url]: https://npmjs.org/package/gulp-util
+[npm-image]: https://badge.fury.io/js/gulp-util.png
 [travis-url]: https://travis-ci.org/gulpjs/gulp-util
 [travis-image]: https://travis-ci.org/gulpjs/gulp-util.png?branch=master
 [coveralls-url]: https://coveralls.io/r/gulpjs/gulp-util
