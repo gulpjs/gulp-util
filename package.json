@@ -12,9 +12,9 @@
     "lodash._reinterpolate": "~2.4.1",
     "optimist": "~0.6.0",
     "vinyl": "~0.2.1",
-    "through": "~2.3.4",
     "dateformat": "~1.0.7-1.2.3",
-    "stream-combiner": "0.0.4"
+    "stream-combiner": "0.0.4",
+    "through2": "~0.4.0"
   },
   "devDependencies": {
     "mocha": "~1.17.0",
