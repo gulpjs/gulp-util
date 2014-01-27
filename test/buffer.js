@@ -24,4 +24,13 @@ describe('buffer()', function(){
       done();
     });
   });
+  it('should buffer stuff and return a stream with the buffered data', function(done){
+    var src = [1,2,3];
+    var inp = es.readArray(src);
+    inp.pipe(util.buffer()).pipe(es.through(function(data) {
+      should.exist(data);
+      data.should.eql(src);
+      done();
+    }));
+  });
 });
