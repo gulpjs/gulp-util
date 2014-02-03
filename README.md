@@ -90,7 +90,7 @@ Returns a stream that does nothing but pass data straight through.
 gulp.task('scripts', function() {
   gulp.src('src/**/*.js')
     .pipe(concat('script.js'))
-    .pipe(gulp.env.production ? uglify() : gutil.noop())
+    .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
     .pipe(gulp.dest('dist/');
 });
 ```
