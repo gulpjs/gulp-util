@@ -14,7 +14,8 @@ describe('log()', function(){
     };
 
     util.log(1, 2, 3, 4, 'five');
-    writtenValue.should.eql('['+util.colors.green('gulp')+'] 1 2 3 4 five\n');
+    var time = util.date(new Date(), "hh:MM:ssTT");
+    writtenValue.should.eql('['+util.colors.green('gulp')+'] [' + util.colors.grey(time) + '] 1 2 3 4 five\n');
 
     // Restore process.stdout.write
     process.stdout.write = stdout_write;
