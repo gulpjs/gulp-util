@@ -42,6 +42,15 @@ values (files, module names, etc.) = magenta
 numbers (times, counts, etc) = cyan
 ```
 
+### error(msg...)
+
+Logs stuff to stderr. Otherwise identical to log().
+
+```
+values (files, module names, etc.) = magenta
+numbers (times, counts, etc) = cyan
+```
+
 ### colors
 
 This is an instance of [chalk](https://github.com/sindresorhus/chalk)
