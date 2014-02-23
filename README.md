@@ -42,18 +42,6 @@ values (files, module names, etc.) = magenta
 numbers (times, counts, etc) = cyan
 ```
 
-### colors
-
-This is an instance of [chalk](https://github.com/sindresorhus/chalk)
-
-### date
-
-This is an instance of [node-dateformat](https://github.com/felixge/node-dateformat).
-
-### linefeed
-
-Just `\n`. Use this.
-
 ### replaceExtension(path, newExtension)
 
 Replaces a file extension in a path. Returns the new path.
@@ -70,18 +58,6 @@ Returns true or false if an object is a Buffer.
 
 This is a lodash.template function wrapper. You must pass in a valid gulp file object so it is available to the user or it will error. You can not configure any of the delimiters. Look at the [lodash docs](http://lodash.com/docs#template) for more info.
 
-## new File(obj)
-
-This is just [vinyl](https://github.com/wearefractal/vinyl)
-
-```javascript
-var file = new gutil.File({
-  base: join(__dirname, './fixtures/'),
-  cwd: __dirname,
-  path: join(__dirname, './fixtures/test.coffee')
-});
-```
-
 ## noop()
 
 Returns a stream that does nothing but pass data straight through.
@@ -92,23 +68,6 @@ gulp.task('scripts', function() {
     .pipe(concat('script.js'))
     .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
     .pipe(gulp.dest('dist/');
-});
-```
-
-## combine(streams...)
-
-Argument may also be an array of streams. Returns a function that returns the combined stream. Useful for keeping things DRY. This is a simple wrapper around event-stream's `.pipeline`
-
-```javascript
-var scripts = gutil.combine(
-    coffee({bare: true}),
-    uglify(),
-    concat('script.js'),
-    gulp.dest('dist/')
-);
-
-gulp.task('default', function() {
-  gulp.src('*.coffee').pipe(scripts());
 });
 ```
 

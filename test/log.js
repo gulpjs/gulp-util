@@ -1,6 +1,8 @@
 var util = require('../');
 var should = require('should');
 var path = require('path');
+var date = require('dateformat');
+var chalk = require('chalk');
 require('mocha');
 
 describe('log()', function(){
@@ -14,8 +16,8 @@ describe('log()', function(){
     };
 
     util.log(1, 2, 3, 4, 'five');
-    var time = util.date(new Date(), 'HH:MM:ss');
-    writtenValue.should.eql('['+util.colors.green('gulp')+'] [' + util.colors.grey(time) + '] 1 2 3 4 five\n');
+    var time = date(new Date(), 'HH:MM:ss');
+    writtenValue.should.eql('['+chalk.green('gulp')+'] [' + chalk.grey(time) + '] 1 2 3 4 five\n');
 
     // Restore process.stdout.write
     process.stdout.write = stdout_write;

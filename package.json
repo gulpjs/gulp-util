@@ -1,32 +1,29 @@
 {
   "name": "gulp-util",
   "description": "Utility functions for gulp plugins",
-  "version": "2.2.14",
+  "version": "3.0.0",
   "homepage": "http://github.com/wearefractal/gulp-util",
   "repository": "git://github.com/wearefractal/gulp-util.git",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
   "main": "./index.js",
   "dependencies": {
-    "chalk": "~0.4.0",
-    "lodash.template": "~2.4.1",
-    "lodash._reinterpolate": "~2.4.1",
-    "vinyl": "~0.2.1",
-    "through2": "~0.4.0",
-    "dateformat": "~1.0.7-1.2.3",
-    "multipipe": "~0.0.1",
-    "minimist": "~0.0.5"
+    "chalk": "^0.4.0",
+    "lodash.template": "^2.4.1",
+    "lodash._reinterpolate": "^2.4.1",
+    "through2": "^0.4.0",
+    "dateformat": "^1.0.7-1.2.3"
   },
   "devDependencies": {
-    "mocha": "~1.17.0",
-    "should": "~3.1.2",
-    "mocha-lcov-reporter": "~0.0.1",
-    "coveralls": "~2.7.0",
-    "istanbul": "~0.2.3",
-    "rimraf": "~2.2.5",
-    "jshint": "~2.4.1",
-    "buffer-equal": "0.0.0",
-    "lodash.templatesettings": "~2.4.1",
-    "event-stream": "~3.1.0"
+    "mocha": "^1.17.0",
+    "should": "^3.1.2",
+    "mocha-lcov-reporter": "^0.0.1",
+    "coveralls": "^2.7.0",
+    "istanbul": "^0.2.3",
+    "rimraf": "^2.2.5",
+    "jshint": "^2.4.1",
+    "buffer-equal": "^0.0.0",
+    "lodash.templatesettings": "^2.4.1",
+    "event-stream": "^3.1.0"
   },
   "scripts": {
     "test": "mocha --reporter spec && jshint",
