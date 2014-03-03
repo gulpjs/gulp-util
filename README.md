@@ -42,18 +42,6 @@ values (files, module names, etc.) = magenta
 numbers (times, counts, etc) = cyan
 ```
 
-### colors
-
-This is an instance of [chalk](https://github.com/sindresorhus/chalk)
-
-### date
-
-This is an instance of [node-dateformat](https://github.com/felixge/node-dateformat).
-
-### linefeed
-
-Just `\n`. Use this.
-
 ### replaceExtension(path, newExtension)
 
 Replaces a file extension in a path. Returns the new path.
@@ -92,23 +80,6 @@ gulp.task('scripts', function() {
     .pipe(concat('script.js'))
     .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
     .pipe(gulp.dest('dist/');
-});
-```
-
-## combine(streams...)
-
-Argument may also be an array of streams. Returns a function that returns the combined stream. Useful for keeping things DRY. This is a simple wrapper around event-stream's `.pipeline`
-
-```javascript
-var scripts = gutil.combine(
-    coffee({bare: true}),
-    uglify(),
-    concat('script.js'),
-    gulp.dest('dist/')
-);
-
-gulp.task('default', function() {
-  gulp.src('*.coffee').pipe(scripts());
 });
 ```
 
