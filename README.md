@@ -1,4 +1,4 @@
-# gulp-util [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status](https://david-dm.org/gulpjs/gulp-util.png?theme=shields.io)](https://david-dm.org/gulpjs/gulp-util)
+# gulp-util [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
 
 ## Information
 
@@ -128,10 +128,10 @@ var err = new gutil.PluginError('test', existingError, {showStack: true});
 ```
 
 [npm-url]: https://npmjs.org/package/gulp-util
-[npm-image]: https://badge.fury.io/js/gulp-util.png
+[npm-image]: https://badge.fury.io/js/gulp-util.svg
 [travis-url]: https://travis-ci.org/gulpjs/gulp-util
-[travis-image]: https://travis-ci.org/gulpjs/gulp-util.png?branch=master
+[travis-image]: https://travis-ci.org/gulpjs/gulp-util.svg?branch=master
 [coveralls-url]: https://coveralls.io/r/gulpjs/gulp-util
 [coveralls-image]: https://coveralls.io/repos/gulpjs/gulp-util/badge.png
 [depstat-url]: https://david-dm.org/gulpjs/gulp-util
-[depstat-image]: https://david-dm.org/gulpjs/gulp-util.png
+[depstat-image]: https://david-dm.org/gulpjs/gulp-util.svg
