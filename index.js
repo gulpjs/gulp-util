@@ -5,6 +5,5 @@ module.exports = {
   isStream: require('./lib/isStream'),
   isBuffer: require('./lib/isBuffer'),
   isNull: require('./lib/isNull'),
-  buffer: require('./lib/buffer'),
-  PluginError: require('./lib/PluginError')
+  buffer: require('./lib/buffer')
 };
