@@ -127,6 +127,25 @@ var existingError = new Error('OMG');
 var err = new gutil.PluginError('test', existingError, {showStack: true});
 ```
 
+
+## monitorCtrlC(cb)
+
+- `cb` is an optional function that will be called when `Ctrl+C` is pressed; if not specified, default handler that prints a message and exits the current process will be used.
+
+This function will prevent sending of `SIGINT` signal when `Ctrl+C` is pressed. Instead, the specified (or default) callback will be invoked.
+
+Preventing `SIGINT` in projects that are using `gulp.watch` on _Windows_ will suppress the annoying `Terminate batch job (Y/N)?` prompt after `Ctrl+C`. This gives your gulp watcher consistent behavior across all platforms.
+
+Example usage:
+
+```javascript
+gulp.task('watch', function () {
+  gutil.monitorCtrlC();
+  gutil.log('Press ^C to exit watcher');
+  gulp.watch('**', ['test']);
+});
+```
+
 [npm-url]: https://npmjs.org/package/gulp-util
 [npm-image]: https://badge.fury.io/js/gulp-util.svg
 [travis-url]: https://travis-ci.org/gulpjs/gulp-util
