@@ -40,7 +40,7 @@ describe('File()', function() {
     file.path.should.equal(fname);
     file.cwd.should.equal(__dirname);
     file.base.should.equal(base);
-    file.relative.should.equal(path.join('fixtures', 'test.coffee'));
+    file.relative.should.equal(path.normalize('fixtures/test.coffee'));
     done();
   });
 });
