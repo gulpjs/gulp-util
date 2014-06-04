@@ -1,3 +1,5 @@
+"use strict";
+
 var should = require('should');
 var gutil = require('../');
 require('mocha');
