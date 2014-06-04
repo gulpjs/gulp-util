@@ -60,9 +60,11 @@ describe('PluginError()', function(){
 
   it('should take arguments as plugin name, error, and one object', function(done){
     var realErr = new Error('something broke');
-    var err = new util.PluginError('test', realErr, {showStack: true});
+    realErr.fileName = 'original.js';
+    var err = new util.PluginError('test', realErr, {showStack: true, fileName: 'override.js'});
     err.plugin.should.equal('test');
     err.message.should.equal('something broke');
+    err.fileName.should.equal('override.js');
     err.showStack.should.equal(true);
     done();
   });
