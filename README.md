@@ -75,6 +75,8 @@ var file = new gutil.File({
 Returns a stream that does nothing but pass data straight through.
 
 ```javascript
+// gulp should be called like this :
+// $ gulp --type production
 gulp.task('scripts', function() {
   gulp.src('src/**/*.js')
     .pipe(concat('script.js'))
