@@ -14,5 +14,6 @@ module.exports = {
   linefeed: require('./lib/linefeed'),
   combine: require('./lib/combine'),
   buffer: require('./lib/buffer'),
-  PluginError: require('./lib/PluginError')
+  PluginError: require('./lib/PluginError'),
+  through2: require('through2')
 };
