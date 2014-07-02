@@ -69,4 +69,24 @@ describe('PluginError()', function(){
     done();
   });
 
+  it('should take properties from error by default', function() {
+    var realErr = new Error('something broke');
+    realErr.abstractProperty = 'abstract';
+    var err = new util.PluginError('test', realErr);
+    err.plugin.should.equal('test');
+    err.message.should.equal('something broke');
+    err.abstractProperty.should.equal('abstract');
+  });
+
+  it('should take properties from error unless overridden in options', function() {
+    var realErr = new Error('something broke');
+    realErr.abstractProperty = 'abstract';
+    realErr.notIncludedProperty = 'abstract';
+    var err = new util.PluginError('test', realErr, {properties: ['abstractProperty']});
+    err.plugin.should.equal('test');
+    err.message.should.equal('something broke');
+    err.abstractProperty.should.equal('abstract');
+    (err.notIncludedProperty === undefined).should.be.true;
+  });
+
 });
