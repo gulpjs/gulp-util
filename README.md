@@ -109,6 +109,7 @@ gulp.src('stuff/*.js')
 - By default the stack will not be shown. Set `options.showStack` to true if you think the stack is important for your error.
 - If you pass an error in as the message the stack will be pulled from that, otherwise one will be created.
 - Note that if you pass in a custom stack string you need to include the message along with that.
+- By default all properties on original errors will be copied to the `PluginError`. However, properties can be white listed via `options.properties` of type `Array[String]`. After, the original error properties have been copied then any property on the `options` that is included in the `options.properties` will override or be copied to the `PluginError`.
 
 These are all acceptable forms of instantiation:
 
