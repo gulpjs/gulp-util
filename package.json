@@ -9,6 +9,7 @@
   "dependencies": {
     "chalk": "^0.5.0",
     "dateformat": "^1.0.7-1.2.3",
+    "lodash": "^2.4.1",
     "lodash._reinterpolate": "^2.4.1",
     "lodash.template": "^2.4.1",
     "lodash.uniq": "~2.4.1",
