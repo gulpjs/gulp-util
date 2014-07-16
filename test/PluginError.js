@@ -102,16 +102,16 @@ describe('PluginError()', function(){
     var realErr = new Error('something broke');
     realErr.fileName = 'original.js';
     var err = new util.PluginError('test', realErr, {showStack: true});
-    err.messageDetails.indexOf('message:').should.equal(-1);
-    err.messageDetails.indexOf('fileName:').should.not.equal(-1);
+    err.toString().indexOf('message:').should.equal(-1);
+    err.toString().indexOf('fileName:').should.not.equal(-1);
   });
 
   it('should show properties added after the error is created', function(){
     var realErr = new Error('something broke');
     var err = new util.PluginError('test', realErr);
     err.fileName = 'original.js';
-    err.messageDetails.indexOf('message:').should.equal(-1);
-    err.messageDetails.indexOf('fileName:').should.not.equal(-1);
+    err.toString().indexOf('message:').should.equal(-1);
+    err.toString().indexOf('fileName:').should.not.equal(-1);
   });
 
   it('should toString quickly', function(done) {
