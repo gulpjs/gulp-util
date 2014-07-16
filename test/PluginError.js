@@ -81,6 +81,15 @@ describe('PluginError()', function(){
   });
 
   it('should show properties', function() {
+    var err = new util.PluginError('test', 'it broke', {showProperties: true});
+    err.fileName = 'original.js';
+    err.lineNumber = 35;
+    err.toString().indexOf('it broke').should.not.equal(-1);
+    err.toString().indexOf('message:').should.equal(-1);
+    err.toString().indexOf('fileName:').should.not.equal(-1);
+  });
+
+  it('should show properties', function() {
     var realErr = new Error('something broke');
     realErr.fileName = 'original.js';
     realErr.lineNumber = 35;
