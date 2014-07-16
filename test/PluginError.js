@@ -80,7 +80,7 @@ describe('PluginError()', function(){
     err.showProperties.should.be.false;
   });
 
-  it('should show properties in toString', function() {
+  it('should show properties', function() {
     var realErr = new Error('something broke');
     realErr.fileName = 'original.js';
     realErr.lineNumber = 35;
@@ -89,7 +89,7 @@ describe('PluginError()', function(){
     err.toString().indexOf('fileName:').should.not.equal(-1);
   });
 
-  it('should not show properties in toString', function() {
+  it('should not show properties', function() {
     var realErr = new Error('something broke');
     realErr.fileName = 'original.js';
     realErr.lineNumber = 35;
@@ -98,7 +98,7 @@ describe('PluginError()', function(){
     err.toString().indexOf('fileName:').should.equal(-1);
   });
 
-  it('should show properties and stack in toString', function(){
+  it('should show properties and stack', function(){
     var realErr = new Error('something broke');
     realErr.fileName = 'original.js';
     var err = new util.PluginError('test', realErr, {showStack: true});
@@ -112,5 +112,24 @@ describe('PluginError()', function(){
     err.fileName = 'original.js';
     err.messageDetails.indexOf('message:').should.equal(-1);
     err.messageDetails.indexOf('fileName:').should.not.equal(-1);
+  });
+
+  it('should toString quickly', function(done) {
+    this.timeout(100);
+
+    var err = new util.PluginError('test', 'it broke');
+    var str = err.toString();
+
+    done();
+  });
+
+  it('should toString quickly with original error', function(done) {
+    this.timeout(100);
+
+    var realErr = new Error('it broke')
+    var err = new util.PluginError('test', realErr);
+    var str = err.toString();
+
+    done();
   });
 });
