@@ -105,4 +105,12 @@ describe('PluginError()', function(){
     err.messageDetails.indexOf('message:').should.equal(-1);
     err.messageDetails.indexOf('fileName:').should.not.equal(-1);
   });
+
+  it('should show properties added after the error is created', function(){
+    var realErr = new Error('something broke');
+    var err = new util.PluginError('test', realErr);
+    err.fileName = 'original.js';
+    err.messageDetails.indexOf('message:').should.equal(-1);
+    err.messageDetails.indexOf('fileName:').should.not.equal(-1);
+  });
 });
