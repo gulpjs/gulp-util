@@ -64,9 +64,9 @@ This is just [vinyl](https://github.com/wearefractal/vinyl)
 
 ```javascript
 var file = new gutil.File({
-  base: join(__dirname, './fixtures/'),
+  base: path.join(__dirname, './fixtures/'),
   cwd: __dirname,
-  path: join(__dirname, './fixtures/test.coffee')
+  path: path.join(__dirname, './fixtures/test.coffee')
 });
 ```
 
