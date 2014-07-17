@@ -108,11 +108,12 @@ describe('PluginError()', function(){
   });
 
   it('should not show properties, but should show stack', function() {
-    var err = new util.PluginError('test', 'it broke', {showStack: true, showProperties: false});
+    var err = new util.PluginError('test', 'it broke', {stack: 'test stack', showStack: true, showProperties: false});
     err.fileName = 'original.js';
     err.lineNumber = 35;
     err.toString().indexOf('message:').should.equal(-1);
     err.toString().indexOf('fileName:').should.equal(-1);
+    err.toString().indexOf('test stack').should.not.equal(-1);
   });
 
   it('should not show properties, but should show stack for real error', function() {
@@ -130,8 +131,8 @@ describe('PluginError()', function(){
     var realErr = new Error('something broke');
     realErr.fileName = 'original.js';
     realErr.lineNumber = 35;
+    realErr._stack = 'test stack';
     var err = new util.PluginError('test', realErr, {showStack: true, showProperties: false});
-    err._stack = 'test stack';
     err.toString().indexOf('message:').should.equal(-1);
     err.toString().indexOf('fileName:').should.equal(-1);
     err.toString().indexOf('test stack').should.not.equal(-1);
@@ -140,9 +141,11 @@ describe('PluginError()', function(){
   it('should show properties and stack', function(){
     var realErr = new Error('something broke');
     realErr.fileName = 'original.js';
+    realErr.stack = 'test stack';
     var err = new util.PluginError('test', realErr, {showStack: true});
     err.toString().indexOf('message:').should.equal(-1);
     err.toString().indexOf('fileName:').should.not.equal(-1);
+    err.toString().indexOf('test stack').should.not.equal(-1);
   });
 
   it('should show properties added after the error is created', function(){
@@ -170,5 +173,10 @@ describe('PluginError()', function(){
     var str = err.toString();
 
     done();
+  });
+
+  it('should not show "Details:" if there are no properties to show', function() {
+    var err = new util.PluginError('plugin', 'message');
+    err.toString().indexOf('Details:').should.equal(-1);
   });
 });
