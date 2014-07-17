@@ -159,7 +159,7 @@ describe('PluginError()', function(){
   it('should toString quickly', function(done) {
     this.timeout(100);
 
-    var err = new util.PluginError('test', 'it broke');
+    var err = new util.PluginError('test', 'it broke', {showStack: true});
     var str = err.toString();
 
     done();
@@ -169,7 +169,7 @@ describe('PluginError()', function(){
     this.timeout(100);
 
     var realErr = new Error('it broke')
-    var err = new util.PluginError('test', realErr);
+    var err = new util.PluginError('test', realErr, {showStack: true});
     var str = err.toString();
 
     done();
