@@ -109,7 +109,7 @@ gulp.src('stuff/*.js')
 - By default the stack will not be shown. Set `options.showStack` to true if you think the stack is important for your error.
 - If you pass an error in as the message the stack will be pulled from that, otherwise one will be created.
 - Note that if you pass in a custom stack string you need to include the message along with that.
-- Error properties will be included in `err.toString`. Can be omitted by including `{showProperties: false}` in the options.
+- Error properties will be included in `err.toString()`. Can be omitted by including `{showProperties: false}` in the options.
 
 These are all acceptable forms of instantiation:
 
