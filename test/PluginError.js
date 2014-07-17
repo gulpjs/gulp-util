@@ -4,6 +4,17 @@ var path = require('path');
 require('mocha');
 
 describe('PluginError()', function(){
+  it('should default name to Error', function() {
+    var err = new util.PluginError('test', 'something broke');
+    err.name.should.equal('Error');
+  });
+
+  it('should default name to Error, even when wrapped error has no name', function() {
+    var realErr = { message: 'something broke' };
+    var err = new util.PluginError('test', realErr);
+    err.name.should.equal('Error');
+  });
+
   it('should print the plugin name in toString', function(){
     var err = new util.PluginError('test', 'something broke');
     err.toString().indexOf('test').should.not.equal(-1);
