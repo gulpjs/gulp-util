@@ -2,10 +2,8 @@
   "name": "gulp-util",
   "description": "Utility functions for gulp plugins",
   "version": "3.0.1",
-  "homepage": "http://github.com/wearefractal/gulp-util",
-  "repository": "git://github.com/wearefractal/gulp-util.git",
+  "repository": "wearefractal/gulp-util",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
-  "main": "./index.js",
   "dependencies": {
     "chalk": "^0.5.0",
     "dateformat": "^1.0.7-1.2.3",
@@ -34,7 +32,7 @@
     "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
   "engines": {
-    "node": ">= 0.9"
+    "node": ">=0.10"
   },
   "licenses": [
     {
