@@ -12,6 +12,7 @@
     "lodash.template": "^2.4.1",
     "minimist": "^1.1.0",
     "multipipe": "^0.1.1",
+    "replace-ext": "0.0.1",
     "through2": "^0.6.1",
     "vinyl": "^0.4.3"
   },
