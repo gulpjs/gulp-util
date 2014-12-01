@@ -5,6 +5,7 @@
   "repository": "wearefractal/gulp-util",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
   "dependencies": {
+    "beeper": "^1.0.0",
     "chalk": "^0.5.1",
     "dateformat": "^1.0.7-1.2.3",
     "lodash": "^2.4.1",
