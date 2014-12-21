@@ -10,14 +10,16 @@
     "LECENSE"
   ],
   "dependencies": {
+    "array-differ": "^1.0.0",
+    "array-uniq": "^1.0.2",
     "beeper": "^1.0.0",
     "chalk": "^0.5.1",
-    "lodash": "^2.4.1",
     "dateformat": "^1.0.11",
     "lodash._reinterpolate": "^2.4.1",
     "lodash.template": "^2.4.1",
     "minimist": "^1.1.0",
     "multipipe": "^0.1.2",
+    "object-assign": "^2.0.0",
     "replace-ext": "0.0.1",
     "through2": "^0.6.3",
     "vinyl": "^0.4.3"
