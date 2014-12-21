@@ -1,7 +1,6 @@
-var util = require('../');
-var should = require('should');
-var path = require('path');
+var util = require('..');
 var through = require('through2');
+require('should');
 require('mocha');
 
 describe('isStream()', function(){

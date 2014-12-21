@@ -1,6 +1,5 @@
-var util = require('../');
+var util = require('..');
 var should = require('should');
-var path = require('path');
 var es = require('event-stream');
 var Stream = require('stream');
 require('mocha');
