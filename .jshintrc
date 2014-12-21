@@ -1,0 +1,13 @@
+{
+  "bitwise": true,
+  "eqeqeq": true,
+  "expr": true,
+  "latedef": true,
+  "newcap": true,
+  "quotmark": "single",
+  "regexp": true,
+  "undef": true,
+  "unused": true,
+  "node": true,
+  "mocha": true
+}

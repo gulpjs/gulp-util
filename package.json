@@ -4,34 +4,41 @@
   "version": "3.0.1",
   "repository": "wearefractal/gulp-util",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
+  "files": [
+    "index.js",
+    "lib",
+    "LECENSE"
+  ],
   "dependencies": {
+    "array-differ": "^1.0.0",
+    "array-uniq": "^1.0.2",
     "beeper": "^1.0.0",
     "chalk": "^0.5.1",
-    "dateformat": "^1.0.7-1.2.3",
-    "lodash": "^2.4.1",
+    "dateformat": "^1.0.11",
     "lodash._reinterpolate": "^2.4.1",
     "lodash.template": "^2.4.1",
     "minimist": "^1.1.0",
-    "multipipe": "^0.1.1",
+    "multipipe": "^0.1.2",
+    "object-assign": "^2.0.0",
     "replace-ext": "0.0.1",
-    "through2": "^0.6.1",
+    "through2": "^0.6.3",
     "vinyl": "^0.4.3"
   },
   "devDependencies": {
     "buffer-equal": "^0.0.1",
-    "coveralls": "^2.7.0",
-    "event-stream": "^3.1.0",
-    "istanbul": "^0.3.2",
-    "jshint": "^2.4.1",
+    "coveralls": "^2.11.2",
+    "event-stream": "^3.1.7",
+    "istanbul": "^0.3.5",
+    "istanbul-coveralls": "^1.0.1",
+    "jshint": "^2.5.11",
     "lodash.templatesettings": "^2.4.1",
-    "mocha": "^1.17.0",
-    "mocha-lcov-reporter": "^0.0.1",
-    "rimraf": "^2.2.5",
-    "should": "^4.0.0"
+    "mocha": "^2.0.1",
+    "rimraf": "^2.2.8",
+    "should": "^4.4.1"
   },
   "scripts": {
-    "test": "mocha --reporter spec && jshint",
-    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+    "test": "jshint *.js lib/*.js test/*.js && mocha",
+    "coveralls": "istanbul cover _mocha --report lcovonly && istanbul-coveralls"
   },
   "engines": {
     "node": ">=0.10"

@@ -1,6 +1,5 @@
-var util = require('../');
-var should = require('should');
-var path = require('path');
+var util = require('..');
+require('should');
 require('mocha');
 
 describe('log()', function(){

@@ -1,6 +1,5 @@
-var util = require('../');
+var util = require('..');
 var should = require('should');
-var path = require('path');
 require('mocha');
 
 describe('template()', function(){
@@ -39,16 +38,14 @@ describe('template()', function(){
     done();
   });
 
-  it('should throw an error when no file object is passed', function(done){
+  it('should throw an error when no file object is passed', function(){
     var opt = {
       name:'todd'
     };
-    try {
-      var tmpl = util.template('test <%= name %> <%= file.path %>', opt);
-    } catch (err) {
-      should.exist(err);
-      done();
-    }
+    
+    should.throws(function() {
+      util.template('test <%= name %> <%= file.path %>', opt);
+    });
   });
 
   it('should ignore modified templateSettings', function(done){
