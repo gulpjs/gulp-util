@@ -27,6 +27,7 @@
     "coveralls": "^2.11.2",
     "event-stream": "^3.1.7",
     "istanbul": "^0.3.5",
+    "istanbul-coveralls": "^1.0.1",
     "jshint": "^2.5.11",
     "lodash.templatesettings": "^2.4.1",
     "mocha": "^2.0.1",
@@ -34,8 +35,8 @@
     "should": "^4.4.1"
   },
   "scripts": {
-    "test": "mocha --reporter spec && jshint",
-    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+    "test": "jshint *.js lib/*.js test/*.js && mocha",
+    "coveralls": "istanbul cover _mocha --report lcovonly && istanbul-coveralls"
   },
   "engines": {
     "node": ">=0.10"
