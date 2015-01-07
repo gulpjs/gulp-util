@@ -35,12 +35,16 @@ gutil.template('test <%= name %> <%= file.path %>', opt) // test todd /js/hi.js
 
 ### log(msg...)
 
-Logs stuff. Already prefixed with [gulp] and all that. Use the right colors for values. If you pass in multiple arguments it will join them by a space.
+Logs stuff. Already prefixed with [gulp] and all that. If you pass in multiple arguments it will join them by a space.
 
 ```
 values (files, module names, etc.) = magenta
 numbers (times, counts, etc) = cyan
 ```
+
+### colors
+
+Is an instance of [chalk](https://github.com/sindresorhus/chalk).
 
 ### replaceExtension(path, newExtension)
 
