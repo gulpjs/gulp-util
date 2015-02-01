@@ -6,8 +6,7 @@
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
   "files": [
     "index.js",
-    "lib",
-    "LECENSE"
+    "lib"
   ],
   "dependencies": {
     "array-differ": "^1.0.0",
