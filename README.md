@@ -85,7 +85,7 @@ gulp.task('scripts', function() {
   gulp.src('src/**/*.js')
     .pipe(concat('script.js'))
     .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
-    .pipe(gulp.dest('dist/');
+    .pipe(gulp.dest('dist/'));
 });
 ```
 
@@ -101,9 +101,9 @@ Callback is optional and receives two arguments: error and data
 
 ```javascript
 gulp.src('stuff/*.js')
-  .pipe(gutil.buffer(function(err, files){
+  .pipe(gutil.buffer(function(err, files) {
   
-  });
+  }));
 ```
 
 ## new PluginError(pluginName, message[, options])
