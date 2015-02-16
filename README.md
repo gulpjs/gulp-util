@@ -21,7 +21,7 @@
 ```javascript
 var gutil = require('gulp-util');
 
-gutil.log('stuff happened', 'Really it did', gutil.colors.cyan('123'));
+gutil.log('stuff happened', 'Really it did', gutil.colors.magenta('123'));
 gutil.beep();
 
 gutil.replaceExtension('file.coffee', '.js'); // file.js
@@ -37,9 +37,10 @@ gutil.template('test <%= name %> <%= file.path %>', opt) // test todd /js/hi.js
 
 Logs stuff. Already prefixed with [gulp] and all that. If you pass in multiple arguments it will join them by a space.
 
+The default gulp coloring using gutil.colors.<color>:
 ```
-values (files, module names, etc.) = magenta
-numbers (times, counts, etc) = cyan
+values (files, module names, etc.) = cyan
+numbers (times, counts, etc) = magenta
 ```
 
 ### colors
