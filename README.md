@@ -3,7 +3,7 @@
 ## Information
 
 <table>
-<tr> 
+<tr>
 <td>Package</td><td>gulp-util</td>
 </tr>
 <tr>
@@ -103,9 +103,24 @@ Callback is optional and receives two arguments: error and data
 ```javascript
 gulp.src('stuff/*.js')
   .pipe(gutil.buffer(function(err, files) {
-  
+
   }));
 ```
+
+## describe(description, taskFn)
+
+Adds a `.description` property to a task function, and return that function.
+
+This is useful to add descriptions to tasks that will be presented in the CLI using the `--tasks` option.
+
+```javascript
+var d = gutil.describe;
+
+gulp.task('build', d('build a standalone lib.js file using browserify', function() {
+
+}));
+```
+
 
 ## new PluginError(pluginName, message[, options])
 
