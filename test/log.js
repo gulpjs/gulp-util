@@ -19,7 +19,7 @@ describe('log()', function(){
 
     util.log(1, 2, 3, 4, 'five');
     var time = util.date(new Date(), 'HH:MM:ss');
-    writtenValue.should.eql('[' + util.colors.grey(time) + '] 1 2 3 4 five\n');
+    writtenValue.should.eql('[' + util.colors.grey(time) + '] 1 2 3 4 \'five\'\n');
 
     done();
   });
@@ -39,9 +39,10 @@ describe('log()', function(){
     };
 
     util.log('%s %d %j', 'something', 0.1, {key: 'value'});
-    var time = util.colors.grey(util.date(new Date(), 'HH:MM:ss'));
+    var time = util.date(new Date(), 'HH:MM:ss');
     writtenValue.should.eql(
-      '[' + time + '] something 0.1 {\"key\": \"value\"}\n'
+      '[' + util.colors.grey(time) + '] '+
+      'something 0.1 {\"key\":\"value\"}\n'
     );
 
     done();
