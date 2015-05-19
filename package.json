@@ -44,10 +44,5 @@
   "engines": {
     "node": ">=0.10"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/wearefractal/gulp-util/raw/master/LICENSE"
-    }
-  ]
+  "license": "MIT"
 }
