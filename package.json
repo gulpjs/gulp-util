@@ -1,7 +1,7 @@
 {
   "name": "gulp-util",
   "description": "Utility functions for gulp plugins",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "repository": "wearefractal/gulp-util",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
   "files": [
