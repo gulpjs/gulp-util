@@ -20,10 +20,10 @@
     "lodash.template": "^3.0.0",
     "minimist": "^1.1.0",
     "multipipe": "^0.1.2",
-    "object-assign": "^2.0.0",
+    "object-assign": "^3.0.0",
     "replace-ext": "0.0.1",
-    "through2": "^0.6.3",
-    "vinyl": "^0.4.3"
+    "through2": "^2.0.0",
+    "vinyl": "^0.5.0"
   },
   "devDependencies": {
     "buffer-equal": "^0.0.1",
@@ -35,7 +35,7 @@
     "lodash.templatesettings": "^3.0.0",
     "mocha": "^2.0.1",
     "rimraf": "^2.2.8",
-    "should": "^5.0.1"
+    "should": "^7.0.1"
   },
   "scripts": {
     "test": "jshint *.js lib/*.js test/*.js && mocha",
