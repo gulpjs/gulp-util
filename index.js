@@ -14,5 +14,6 @@ module.exports = {
   linefeed: '\n',
   combine: require('./lib/combine'),
   buffer: require('./lib/buffer'),
+  glob: require('globby'),
   PluginError: require('./lib/PluginError')
 };
