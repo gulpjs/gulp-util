@@ -107,6 +107,18 @@ gulp.src('stuff/*.js')
   }));
 ```
 
+## glob(patterns, [options], callback)
+
+This is just [globby](https://github.com/sindresorhus/globby)
+
+```javascript
+console.log(gutil.glob.sync('*.js'));
+
+gutil.glob(['**/*.json', '!node_modules/**'], function (err, paths) {
+    console.log(paths);
+});
+```
+
 ## new PluginError(pluginName, message[, options])
 
 - pluginName should be the module name of your plugin
