@@ -2,7 +2,7 @@ var util = require('..');
 require('should');
 require('mocha');
 
-describe('PluginError()', function(){
+describe('PluginError()', function() {
   it('should default name to Error', function() {
     var err = new util.PluginError('test', 'something broke');
     err.name.should.equal('Error');
@@ -14,54 +14,54 @@ describe('PluginError()', function(){
     err.name.should.equal('Error');
   });
 
-  it('should print the plugin name in toString', function(){
+  it('should print the plugin name in toString', function() {
     var err = new util.PluginError('test', 'something broke');
     err.toString().should.containEql('test');
   });
 
-  it('should not include the stack by default in toString', function(){
+  it('should not include the stack by default in toString', function() {
     var err = new util.PluginError('test', 'something broke');
     // just check that there are no 'at' lines
     err.toString().should.not.containEql('at');
   });
 
-  it('should include the stack when specified in toString', function(){
+  it('should include the stack when specified in toString', function() {
     var err = new util.PluginError('test', 'something broke', {stack: 'at huh', showStack: true});
     // just check that there are 'at' lines
     err.toString().should.containEql('at');
   });
 
-  it('should take arguments as one object', function(){
+  it('should take arguments as one object', function() {
     var err = new util.PluginError({
       plugin: 'test',
-      message: 'something broke'
+      message: 'something broke',
     });
     err.plugin.should.equal('test');
     err.message.should.equal('something broke');
   });
 
-  it('should take arguments as plugin name and one object', function(){
+  it('should take arguments as plugin name and one object', function() {
     var err = new util.PluginError('test', {
-      message: 'something broke'
+      message: 'something broke',
     });
     err.plugin.should.equal('test');
     err.message.should.equal('something broke');
   });
 
-  it('should take arguments as plugin name and message', function(){
+  it('should take arguments as plugin name and message', function() {
     var err = new util.PluginError('test', 'something broke');
     err.plugin.should.equal('test');
     err.message.should.equal('something broke');
   });
 
-  it('should take arguments as plugin name, message, and one object', function(){
+  it('should take arguments as plugin name, message, and one object', function() {
     var err = new util.PluginError('test', 'something broke', {showStack: true});
     err.plugin.should.equal('test');
     err.message.should.equal('something broke');
     err.showStack.should.equal(true);
   });
 
-  it('should take arguments as plugin name, error, and one object', function(){
+  it('should take arguments as plugin name, error, and one object', function() {
     var realErr = new Error('something broke');
     realErr.fileName = 'original.js';
     var err = new util.PluginError('test', realErr, {showStack: true, fileName: 'override.js'});
@@ -80,12 +80,12 @@ describe('PluginError()', function(){
     err.abstractProperty.should.equal('abstract');
   });
 
-  it('should be configured to show properties by default', function(){
+  it('should be configured to show properties by default', function() {
     var err = new util.PluginError('test', 'something broke');
     err.showProperties.should.be.true;
   });
 
-  it('should not be configured to take option to show properties', function(){
+  it('should not be configured to take option to show properties', function() {
     var err = new util.PluginError('test', 'something broke', {showProperties: false});
     err.showProperties.should.be.false;
   });
@@ -148,7 +148,7 @@ describe('PluginError()', function(){
     err.toString().indexOf('test stack').should.not.equal(-1);
   });
 
-  it('should show properties and stack', function(){
+  it('should show properties and stack', function() {
     var realErr = new Error('something broke');
     realErr.fileName = 'original.js';
     realErr.stack = 'test stack';
@@ -158,7 +158,7 @@ describe('PluginError()', function(){
     err.toString().indexOf('test stack').should.not.equal(-1);
   });
 
-  it('should show properties added after the error is created', function(){
+  it('should show properties added after the error is created', function() {
     var realErr = new Error('something broke');
     var err = new util.PluginError('test', realErr);
     err.fileName = 'original.js';

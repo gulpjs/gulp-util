@@ -34,6 +34,8 @@
     "event-stream": "^3.1.7",
     "istanbul": "^0.3.5",
     "istanbul-coveralls": "^1.0.1",
+    "jscs": "^2.3.5",
+    "jscs-preset-gulp": "^1.0.0",
     "jshint": "^2.5.11",
     "lodash.templatesettings": "^3.0.0",
     "mocha": "^2.0.1",
@@ -41,7 +43,8 @@
     "should": "^7.0.1"
   },
   "scripts": {
-    "test": "jshint *.js lib/*.js test/*.js && mocha",
+    "lint": "jshint *.js lib/*.js test/*.js && jscs *.js lib/ test/",
+    "test": "npm run lint && mocha",
     "coveralls": "istanbul cover _mocha --report lcovonly && istanbul-coveralls"
   },
   "engines": {

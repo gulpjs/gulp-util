@@ -10,7 +10,7 @@ describe('File()', function() {
     var file = new util.File({
       base: base,
       cwd: __dirname,
-      path: fname
+      path: fname,
     });
     should.exist(file, 'root');
     should.exist(file.relative, 'relative');
@@ -30,7 +30,7 @@ describe('File()', function() {
     var file = new util.File({
       base: base,
       cwd: __dirname,
-      path: fname
+      path: fname,
     });
     should.exist(file, 'root');
     should.exist(file.relative, 'relative');
