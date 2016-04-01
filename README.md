@@ -1,6 +1,8 @@
-# gulp-util [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
+# gulp-util [![deprecated][deprecated-image]][deprecated-url] [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
 
 ## Information
+
+**DEPRECATION WARNING** : gulp-util is being [outdated][deprecated-url], please, rely on [vinyl module](https://www.npmjs.com/package/vinyl) directly.
 
 <table>
 <tr> 
@@ -144,3 +146,5 @@ var err = new gutil.PluginError('test', existingError, {showStack: true});
 [coveralls-image]: https://img.shields.io/coveralls/gulpjs/gulp-util.svg
 [depstat-url]: https://david-dm.org/gulpjs/gulp-util
 [depstat-image]: https://david-dm.org/gulpjs/gulp-util.svg
+[deprecated-url]: https://github.com/gulpjs/gulp-util/issues/118#issuecomment-204107094
+[deprecated-image]: https://img.shields.io/badge/status-deprecated-red.svg
