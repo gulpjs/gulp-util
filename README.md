@@ -136,6 +136,39 @@ var existingError = new Error('OMG');
 var err = new gutil.PluginError('test', existingError, {showStack: true});
 ```
 
+## lazyTask(gulp [, taskPathBuilderFunctionOrBasePath])
+
+This function helps you load only needable tasks in this session.
+Tasks compile more quickly and only usable.
+
+`taskPathBuilderFunctionOrBasePath` - string or callback for build path to the loading module. If it specified as `string` It will recognized as base path for loading modules
+
+```javascript
+var task = lazyTask(gulp, path.join(__dirname, '/some/path/to/tasks'));
+
+gulp.task('baz', [
+    task('my-awesome-task-module'),
+    task('another/task-module')
+])
+
+gulp.task('foo', [
+    task('bar/sometask'), // .../some/path/to/tasks/bar/sometask.js OR .../some/path/to/tasks/bar/sometask/index.js
+    task('/somedir/bar') // load /somedir/bar.js OR /somedir/bar/index.js
+])
+```
+
+```javascript
+// example of task module
+module.exports = function (callback) {
+    return gulp.src('**/*')
+        .pipe(/*...*/);
+};
+```
+
+If you execute `gulp foo` you will load only `bar/sometask` & `/somedir/bar` without `my-awesome-task-module` & `another/task-module`
+
+You still use direct call of lazytasks, for example `gulp bar/sometask`
+
 [npm-url]: https://www.npmjs.com/package/gulp-util
 [npm-image]: https://badge.fury.io/js/gulp-util.svg
 [travis-url]: https://travis-ci.org/gulpjs/gulp-util

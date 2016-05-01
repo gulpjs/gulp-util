@@ -14,5 +14,6 @@ module.exports = {
   linefeed: '\n',
   combine: require('./lib/combine'),
   buffer: require('./lib/buffer'),
-  PluginError: require('./lib/PluginError')
+  PluginError: require('./lib/PluginError'),
+  lazyTask: require('./lib/lazyTask')
 };
