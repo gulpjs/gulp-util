@@ -20,13 +20,13 @@
     "lodash._reescape": "^3.0.0",
     "lodash._reevaluate": "^3.0.0",
     "lodash._reinterpolate": "^3.0.0",
-    "lodash.template": "^3.0.0",
+    "lodash.template": "^4.4.0",
     "minimist": "^1.1.0",
-    "multipipe": "^0.1.2",
-    "object-assign": "^3.0.0",
-    "replace-ext": "0.0.1",
+    "multipipe": "^1.0.2",
+    "object-assign": "^4.1.0",
+    "replace-ext": "1.0.0",
     "through2": "^2.0.0",
-    "vinyl": "^0.5.0"
+    "vinyl": "^2.0.0"
   },
   "devDependencies": {
     "buffer-equal": "^0.0.1",

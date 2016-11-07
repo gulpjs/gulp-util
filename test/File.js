@@ -6,7 +6,7 @@ require('mocha');
 describe('File()', function() {
   it('should return a valid file', function(done) {
     var fname = path.join(__dirname, './fixtures/test.coffee');
-    var base = path.join(__dirname, './fixtures/');
+    var base = path.join(__dirname, './fixtures');
     var file = new util.File({
       base: base,
       cwd: __dirname,
