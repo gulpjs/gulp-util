@@ -38,11 +38,12 @@ describe('log()', function(){
       }
     };
 
-    util.log('%s %d %j', 'something', 0.1, {key: 'value'});
+    var pluginError = new util.PluginError('plugin error', new Error('an error'), {showStack: true});
+    util.log('%s %d %j', 'something', 0.1, {key: 'value'}, pluginError);
     var time = util.date(new Date(), 'HH:MM:ss');
     writtenValue.should.eql(
       '[' + util.colors.grey(time) + '] '+
-      'something 0.1 {\"key\":\"value\"}\n'
+      'something 0.1 {\"key\":\"value\"} ' + pluginError.toString() + '\n'
     );
 
     done();
