@@ -2,18 +2,18 @@ var util = require('..');
 require('should');
 require('mocha');
 
-describe('log()', function(){
-  it('should work i guess', function(done){
+describe('log()', function() {
+  it('should work i guess', function(done) {
     var count = 0;
     var writtenValue = '';
 
     // Stub process.stdout.write
-    var stdout_write = process.stdout.write;
+    var stdoutWrite = process.stdout.write;
     process.stdout.write = function(value) {
       writtenValue += value;
-      if(++count > 2){
+      if (++count > 2) {
         // Restore process.stdout.write after test
-        process.stdout.write = stdout_write;
+        process.stdout.write = stdoutWrite;
       }
     };
 
@@ -24,24 +24,24 @@ describe('log()', function(){
     done();
   });
 
-  it('should accept formatting', function(done){
+  it('should accept formatting', function(done) {
     var count = 0;
     var writtenValue = '';
 
     // Stub process.stdout.write
-    var stdout_write = process.stdout.write;
+    var stdoutWrite = process.stdout.write;
     process.stdout.write = function(value) {
       writtenValue += value;
-      if(++count > 2){
+      if (++count > 2) {
         // Restore process.stdout.write after test
-        process.stdout.write = stdout_write;
+        process.stdout.write = stdoutWrite;
       }
     };
 
     util.log('%s %d %j', 'something', 0.1, {key: 'value'});
     var time = util.date(new Date(), 'HH:MM:ss');
     writtenValue.should.eql(
-      '[' + util.colors.grey(time) + '] '+
+      '[' + util.colors.grey(time) + '] ' +
       'something 0.1 {\"key\":\"value\"}\n'
     );
 
