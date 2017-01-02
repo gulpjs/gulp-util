@@ -189,4 +189,13 @@ describe('PluginError()', function(){
     var err = new util.PluginError('plugin', 'message');
     err.toString().indexOf('Details:').should.equal(-1);
   });
+  
+  it('should work without new', function () {
+    var err1 = util.PluginError('test', 'it broke');
+    var err2 = new util.PluginError('test', 'it broke');
+    
+    err1.should.be.an.instanceOf(util.PluginError);
+    err1.should.be.an.instanceOf(Error);
+    err1.should.eql(err2);
+  });
 });

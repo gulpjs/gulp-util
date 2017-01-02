@@ -133,6 +133,8 @@ var err = new gutil.PluginError('test', 'something broke', {showStack: true});
 
 var existingError = new Error('OMG');
 var err = new gutil.PluginError('test', existingError, {showStack: true});
+
+var err = gutil.PluginError('test', 'something broke');
 ```
 
 [npm-url]: https://www.npmjs.com/package/gulp-util
