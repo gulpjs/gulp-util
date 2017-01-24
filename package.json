@@ -2,7 +2,7 @@
   "name": "gulp-util",
   "description": "Utility functions for gulp plugins",
   "version": "3.0.8",
-  "repository": "gulpjs/gulp-util",
+  "repository": "https://github.com/gulpjs/gulp-util.git",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
   "files": [
     "index.js",
