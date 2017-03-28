@@ -9,7 +9,7 @@
     "lib"
   ],
   "dependencies": {
-    "array-differ": "^1.0.0",
+    "array-differ": "^2.0.0",
     "array-uniq": "^1.0.2",
     "beeper": "^1.0.0",
     "chalk": "^1.0.0",
