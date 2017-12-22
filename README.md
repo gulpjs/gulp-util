@@ -1,3 +1,24 @@
+__This module has been deprecated. Please use the individual modules you need instead of this gigantic grab-bag.__
+
+__Here are some things you can use instead:__
+
+* `gutil.File` => https://www.npmjs.com/package/vinyl
+* `gutil.replaceExtension` => The `.extname` property on vinyl objects or https://www.npmjs.com/package/replace-ext
+* `gutil.colors` => https://www.npmjs.com/package/ansi-colors
+* `gutil.date` => https://www.npmjs.com/package/date-format
+* `gutil.log` => https://www.npmjs.com/package/fancy-log
+* `gutil.template` => https://www.npmjs.com/package/lodash.template
+* `gutil.env` => https://www.npmjs.com/package/minimist
+* `gutil.beep` => https://www.npmjs.com/package/beeper
+* `gutil.noop` => Use an empty function like `function() {}`
+* `gutil.isStream` => Use the `.isStream()` method on vinyl objects
+* `gutil.isBuffer` => Use the `.isBuffer()` method on vinyl objects
+* `gutil.isNull` => Use the `.isNull()` method on vinyl objects
+* `gutil.linefeed` => Use the string `'\n'` in your code
+* `gutil.combine` => https://www.npmjs.com/package/multipipe
+* `gutil.buffer` => https://www.npmjs.com/package/list-stream
+* `gutil.PluginError` => https://www.npmjs.com/package/plugin-error
+
 # gulp-util [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
 
 ## Information
