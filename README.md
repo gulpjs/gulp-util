@@ -1,4 +1,4 @@
-__This module has been deprecated. Please use the individual modules you need instead of this gigantic grab-bag.__
+__This module has been deprecated. More information at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5__
 
 __Here are some things you can use instead:__
 
