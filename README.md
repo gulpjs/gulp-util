@@ -10,7 +10,7 @@ __Here are some things you can use instead:__
 * `gutil.template` => https://www.npmjs.com/package/lodash.template
 * `gutil.env` => https://www.npmjs.com/package/minimist
 * `gutil.beep` => https://www.npmjs.com/package/beeper
-* `gutil.noop` => Use an empty function like `function() {}`
+* `gutil.noop` => https://www.npmjs.com/package/through2
 * `gutil.isStream` => Use the `.isStream()` method on vinyl objects
 * `gutil.isBuffer` => Use the `.isBuffer()` method on vinyl objects
 * `gutil.isNull` => Use the `.isNull()` method on vinyl objects
