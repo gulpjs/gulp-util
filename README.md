@@ -164,3 +164,11 @@ var err = new gutil.PluginError('test', existingError, {showStack: true});
 [coveralls-image]: https://img.shields.io/coveralls/gulpjs/gulp-util.svg
 [depstat-url]: https://david-dm.org/gulpjs/gulp-util
 [depstat-image]: https://david-dm.org/gulpjs/gulp-util.svg
+
+---
+
+<div align="center">
+  <b><a href="https://tidelift.com/subscription/pkg/npm-gulp-util?utm_source=npm-gulp-util&utm_medium=referral&utm_campaign=readme">Get supported gulp-util with the Tidelift Subscription</a></b>
+  <br>
+  <sub>Tidelift gives software development teams a single source for purchasing and maintaining their software, with professional grade assurances from the experts who know it best, while seamlessly integrating with existing tools.</sub>
+</div>
