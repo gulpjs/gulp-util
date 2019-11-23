@@ -156,6 +156,13 @@ var existingError = new Error('OMG');
 var err = new gutil.PluginError('test', existingError, {showStack: true});
 ```
 
+## gulp-util for enterprise
+
+Available as part of the Tidelift Subscription
+
+The maintainers of gulp-util and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-gulp-util?utm_source=npm-gulp-util&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+
+
 [npm-url]: https://www.npmjs.com/package/gulp-util
 [npm-image]: https://badge.fury.io/js/gulp-util.svg
 [travis-url]: https://travis-ci.org/gulpjs/gulp-util
@@ -164,11 +171,3 @@ var err = new gutil.PluginError('test', existingError, {showStack: true});
 [coveralls-image]: https://img.shields.io/coveralls/gulpjs/gulp-util.svg
 [depstat-url]: https://david-dm.org/gulpjs/gulp-util
 [depstat-image]: https://david-dm.org/gulpjs/gulp-util.svg
-
----
-
-<div align="center">
-  <b><a href="https://tidelift.com/subscription/pkg/npm-gulp-util?utm_source=npm-gulp-util&utm_medium=referral&utm_campaign=readme">Get supported gulp-util with the Tidelift Subscription</a></b>
-  <br>
-  <sub>Tidelift gives software development teams a single source for purchasing and maintaining their software, with professional grade assurances from the experts who know it best, while seamlessly integrating with existing tools.</sub>
-</div>
